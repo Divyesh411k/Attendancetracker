@@ -22,6 +22,16 @@ function App() {
     }
   };
 
+  const deleteSubject = (index) => {
+    const confirmDelete = window.confirm('Are you sure you want to delete this subject?');
+    if (confirmDelete) {
+      const updatedSubjects = [...subjects];
+      updatedSubjects.splice(index, 1);
+      setSubjects(updatedSubjects);
+      localStorage.setItem('subjects', JSON.stringify(updatedSubjects));
+    }
+  };
+
   const markPresent = (index) => {
     const updatedSubjects = [...subjects];
     updatedSubjects[index].present++;
@@ -78,6 +88,7 @@ function App() {
       <div id="attendance-table">
         {subjects.map((subject, index) => (
           <div key={index} className="subject">
+            <button className="delete-button" onClick={() => deleteSubject(index)}>❌</button> {/* Add delete button */}
             <h2>{subject.name}</h2>
             <p>Total Lec: {subject.total}</p>
             <p> Present: {subject.present}</p>
