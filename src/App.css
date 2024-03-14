@@ -1,0 +1,66 @@
+.App {
+  position: relative;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.subject {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px auto;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  max-width: 300px;
+}
+
+.subject h2 {
+  margin-top: 0;
+}
+
+.subject p {
+  margin: 5px 0;
+}
+
+.subject button {
+  position: relative;
+  margin-top: 10px;
+  right:10px;
+}
+
+#attendance-table {
+  margin-top: 20px;
+}
+
+.download-pdf {
+  margin-top: 20px;
+}
+
+.watermark {
+  position:fixed;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  top:97%;
+  right: 1%;
+  font-size: 20px;
+  color: rgba(0, 251, 255, 0.5);
+}
