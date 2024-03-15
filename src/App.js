@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import html2pdf from 'html2pdf.js';
+import {html2pdf} from 'html2pdf.js';
 import './App.css';
 
 function App() {
