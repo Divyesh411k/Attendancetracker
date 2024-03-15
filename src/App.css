@@ -64,6 +64,21 @@ button:hover {
   margin-top: 20px;
 }
 
+div.features{
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  z-index: +1;
+
+}
+
+div.percentage{
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: +1;
+  background-color: #45a049;
+}
 .watermark {
   position: fixed;
   font-family: Arial, sans-serif;

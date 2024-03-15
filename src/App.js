@@ -82,9 +82,12 @@ function App() {
   return (
     <div className="App">
       <h1>Attendance Tracker</h1>
+      <div className='features'>
       <button onClick={addSubject}>Add Subject</button>
       <button onClick={eraseData}>Erase Data</button>
       <button onClick={undoLastAction} disabled={!lastAction}>Undo</button>
+      </div>
+      
       <div id="attendance-table">
         {subjects.map((subject, index) => (
           <div key={index} className="subject">
@@ -98,10 +101,11 @@ function App() {
             <p>Percentage: {((subject.present / subject.total) * 100 || 0).toFixed(2)}%</p>
           </div>
         ))}
-        <h2>Total Percentage: {(
-          subjects.reduce((acc, curr) => acc + ((curr.present / curr.total) * 100 || 0), 0) / subjects.length || 0
-        ).toFixed(2)}%</h2>
       </div>
+      <div className='percentage'><h2 >Total Percentage: {(
+          subjects.reduce((acc, curr) => acc + ((curr.present / curr.total) * 100 || 0), 0) / subjects.length || 0).toFixed(2)}%</h2>
+      </div>
+
       <div className="watermark">DK</div>
     </div>
   );
